@@ -1,6 +1,18 @@
 priority -50
 
 ###########################################################################
+#                            PERSONAL SNIPPETS                            #
+###########################################################################
+
+snippet pf "print format string"
+print(f'${1:output}'${0})
+endsnippet
+
+snippet p "print"
+print('${1:output}'${0})
+endsnippet
+
+###########################################################################
 #                            TEXTMATE SNIPPETS                            #
 ###########################################################################
 
@@ -256,7 +268,6 @@ endglobal
 
 snippet class "class with docstrings" b
 class ${1:MyClass}(${2:object}):
-
 	`!p snip.rv = triple_quotes(snip)`${3:Docstring for $1. }`!p snip.rv = triple_quotes(snip)`
 
 	def __init__(self$4):
@@ -279,7 +290,6 @@ endsnippet
 
 snippet slotclass "class with slots and docstrings" b
 class ${1:MyClass}(${2:object}):
-
 	`!p snip.rv = triple_quotes(snip)`${3:Docstring for $1. }`!p snip.rv = triple_quotes(snip)`
 `!p
 snip >> 1
